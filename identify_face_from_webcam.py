@@ -7,7 +7,7 @@ cascadePath = "haarcascade_frontalface_default.xml"
 faceCascade = cv2.CascadeClassifier(cascadePath);
 font = cv2.FONT_HERSHEY_SIMPLEX
 id = 0
-names = ['None', 'uttam', 'aakash', 'kokila', 'sathiya'] 
+names = ['Naresh', 'uttam', 'aakash', 'kokila', 'Vatchala'] 
 cam = cv2.VideoCapture(0)
 cam.set(3, 640) 
 cam.set(4, 480) 
@@ -40,7 +40,6 @@ while True:
     k = cv2.waitKey(10) & 0xff 
     if k == 27:
         break
-# Do a bit of cleanup
 print("\n [INFO] Exiting Program and cleanup stuff")
 cam.release()
 cv2.destroyAllWindows()

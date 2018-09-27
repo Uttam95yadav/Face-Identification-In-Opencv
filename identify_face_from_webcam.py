@@ -6,17 +6,15 @@ recognizer.read('trainner/trainner.yml')
 cascadePath = "haarcascade_frontalface_default.xml"
 faceCascade = cv2.CascadeClassifier(cascadePath);
 font = cv2.FONT_HERSHEY_SIMPLEX
-#iniciate id counter
 id = 0
-names = ['None', 'aakash', 'uttam', 'kokila', 'aakash', 'sathiya'] 
+names = ['None', 'uttam', 'aakash', 'kokila', 'sathiya'] 
 cam = cv2.VideoCapture(0)
-cam.set(3, 640) # set video widht
-cam.set(4, 480) # set video height
+cam.set(3, 640) 
+cam.set(4, 480) 
 minW = 0.1*cam.get(3)
 minH = 0.1*cam.get(4)
 while True:
     ret, img =cam.read()
-     # Flip vertically
     gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
     
     faces = faceCascade.detectMultiScale( 
@@ -39,7 +37,7 @@ while True:
         cv2.putText(img, str(confidence), (x+5,y+h-5), font, 1, (255,255,0), 1)  
     
     cv2.imshow('camera',img) 
-    k = cv2.waitKey(10) & 0xff # Press 'ESC' for exiting video
+    k = cv2.waitKey(10) & 0xff 
     if k == 27:
         break
 # Do a bit of cleanup

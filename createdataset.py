@@ -15,7 +15,7 @@ while(True):
         #incrementing sample number 
         sampleNum=sampleNum+1
         #saving the captured face in the dataset folder
-        cv2.imwrite("C:/Users/sslindia/Desktop/faceidentification/dataSet/User."+str(Id) +'.'+ str(sampleNum) + ".jpg", gray[y:y+h,x:x+w])
+        cv2.imwrite("dataSet/User."+str(Id) +'.'+ str(sampleNum) + ".jpg", gray[y:y+h,x:x+w])
 
         cv2.imshow('frame',img)
     #wait for 100 miliseconds 

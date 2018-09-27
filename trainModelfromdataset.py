@@ -14,7 +14,7 @@ def getImagesAndLabels(path):
     Ids=[]
     #now looping through all the image paths and loading the Ids and the images
     for imagePath in imagePaths:
-        #loading the image and converting it to gray scale
+        #loading the image and converting it to gray scalez
         pilImage=Image.open(imagePath).convert('L')
         #Now we are converting the PIL image into numpy array
         imageNp=np.array(pilImage,'uint8')
